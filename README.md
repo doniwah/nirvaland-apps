@@ -1,6 +1,4 @@
-# Project Name
-
-Deskripsi singkat project Anda di sini.
+Nirvaland
 
 ## 📋 Daftar Isi
 
@@ -17,10 +15,6 @@ Deskripsi singkat project Anda di sini.
 - [Lisensi](#lisensi)
 
 ## ✨ Fitur
-
-- [ ] Fitur utama 1
-- [ ] Fitur utama 2
-- [ ] Fitur utama 3
 
 ## 🛠 Teknologi
 
