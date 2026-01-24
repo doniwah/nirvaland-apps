@@ -17,31 +17,31 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 213 50% 15%;
 
-    --primary: 213 55% 25%;
+    --primary: 142 72% 29%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 40 90% 55%;
-    --secondary-foreground: 213 50% 15%;
+    --secondary-foreground: 142 72% 29%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 213 20% 45%;
+    --muted: 142 20% 96%;
+    --muted-foreground: 142 20% 45%;
 
     --accent: 40 90% 55%;
-    --accent-foreground: 213 50% 15%;
+    --accent-foreground: 142 72% 29%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 213 55% 25%;
+    --border: 142 32% 91%;
+    --input: 142 32% 91%;
+    --ring: 142 72% 29%;
 
     --radius: 0.5rem;
 
     /* Custom colors for Nirvaland */
-    --navy: 213 55% 25%;
-    --navy-dark: 213 60% 18%;
-    --navy-light: 213 45% 35%;
+    --navy: 142 72% 29%;
+    --navy-dark: 142 76% 20%;
+    --navy-light: 142 60% 40%;
     --gold: 40 90% 55%;
     --gold-dark: 40 85% 45%;
     --cream: 40 30% 97%;

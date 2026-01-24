@@ -31,12 +31,12 @@ const StatsSection = () => {
             </h2>
             <div className="inline-block">
               <p className="text-7xl md:text-8xl font-bold text-secondary">
-                500+
+                100+
               </p>
-              <p className="text-2xl text-primary font-semibold">KELUARGA</p>
+              <p className="text-2xl text-primary font-semibold">Investor</p>
             </div>
             <p className="text-muted-foreground mt-6 max-w-md">
-              Lebih dari 500 keluarga Indonesia telah mempercayakan investasi properti mereka kepada Nirvaland.
+              Lebih dari 100 investor telah mempercayakan investasi properti mereka kepada Nirvaland.
             </p>
           </div>
         </div>
