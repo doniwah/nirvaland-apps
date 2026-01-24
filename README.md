@@ -1,73 +1,180 @@
-# Welcome to your Lovable project
+Nirvaland
 
-## Project info
+## 📋 Daftar Isi
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+- [Fitur](#fitur)
+- [Teknologi](#teknologi)
+- [Prasyarat](#prasyarat)
+- [Instalasi](#instalasi)
+- [Penggunaan](#penggunaan)
+- [Struktur Proyek](#struktur-proyek)
+- [Konfigurasi](#konfigurasi)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Kontribusi](#kontribusi)
+- [Lisensi](#lisensi)
 
-## How can I edit this code?
+## ✨ Fitur
 
-There are several ways of editing your application.
+## 🛠 Teknologi
 
-**Use Lovable**
+- **Frontend Framework**: React + TypeScript
+- **Build Tool**: Vite
+- **CSS**: Tailwind CSS
+- **Backend**: Supabase
+- **Package Manager**: Bun
+- **Testing**: Vitest
+- **Linting**: ESLint
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 📦 Prasyarat
 
-Changes made via Lovable will be committed automatically to this repo.
+Sebelum memulai, pastikan Anda telah menginstal:
 
-**Use your preferred IDE**
+- [Bun](https://bun.sh/) (versi x.x.x atau lebih tinggi)
+- Node.js (optional, jika tidak menggunakan Bun)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Instalasi
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clone repository**
+   ```bash
+   git clone <repository-url>
+   cd <project-name>
+   ```
 
-Follow these steps:
+2. **Install dependencies**
+   ```bash
+   bun install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. **Setup environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   Kemudian edit file `.env` dengan konfigurasi Anda (khususnya Supabase credentials).
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+4. **Setup Supabase**
+   ```bash
+   bun supabase start
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 💻 Penggunaan
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Development
+
+```bash
+bun run dev
 ```
 
-**Edit a file directly in GitHub**
+Aplikasi akan berjalan di `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build untuk Production
 
-**Use GitHub Codespaces**
+```bash
+bun run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Preview Production Build
 
-## What technologies are used for this project?
+```bash
+bun run preview
+```
 
-This project is built with:
+### Linting
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+bun run lint
+```
 
-## How can I deploy this project?
+### Testing
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```bash
+bun run test
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 📁 Struktur Proyek
 
-Yes, you can!
+```
+src/
+├── components/      # React components (AboutSection, BookingForm, etc.)
+├── pages/          # Halaman aplikasi
+├── hooks/          # Custom React hooks
+├── lib/            # Utility functions
+├── data/           # Static data
+├── integrations/   # Integrasi eksternal (Supabase, API, etc.)
+├── assets/         # Media assets
+├── App.tsx         # Main App component
+├── main.tsx        # Entry point
+└── index.css       # Global styles
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+supabase/
+├── functions/      # Serverless functions
+├── migrations/     # Database migrations
+└── config.toml     # Supabase configuration
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+public/            # Static files
+```
+
+## ⚙️ Konfigurasi
+
+### Tailwind CSS
+Konfigurasi Tailwind dapat ditemukan di [`tailwind.config.ts`](tailwind.config.ts)
+
+### TypeScript
+Konfigurasi TypeScript ada di [`tsconfig.json`](tsconfig.json) dan [`tsconfig.app.json`](tsconfig.app.json)
+
+### Vite
+Konfigurasi Vite ada di [`vite.config.ts`](vite.config.ts)
+
+### ESLint
+Konfigurasi ESLint ada di [`eslint.config.js`](eslint.config.js)
+
+## 🧪 Testing
+
+Project menggunakan Vitest untuk unit testing.
+
+```bash
+# Run tests
+bun run test
+
+# Run tests dengan coverage
+bun run test:coverage
+```
+
+Test files biasanya terletak di folder `src/test/`
+
+## 🌐 Deployment
+
+### Deploy ke Vercel/Netlify
+
+1. Push code ke repository GitHub
+2. Connect repository ke Vercel/Netlify
+3. Set environment variables di dashboard
+4. Deploy otomatis akan terpicu
+
+### Deploy Supabase Functions
+
+```bash
+bun supabase functions deploy
+```
+
+## 🤝 Kontribusi
+
+Kontribusi sangat diterima! Silakan:
+
+1. Fork repository
+2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buat Pull Request
+
+## 📝 Lisensi
+
+Project ini berlisensi di bawah MIT License - lihat file [`LICENSE`](LICENSE) untuk detail.
+
+## 📧 Kontak
+
+Pertanyaan atau saran? Silakan buat issue di repository ini.
+
+---
+
+**Dibuat dengan ❤️**
