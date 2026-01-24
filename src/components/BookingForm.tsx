@@ -185,7 +185,7 @@ const BookingForm = ({ defaultPropertyId, onSuccess }: BookingFormProps) => {
               </FormItem>
             )}
           />
-
+          
           <FormField
             control={form.control}
             name="phone"

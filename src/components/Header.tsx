@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,6 @@ const Header = () => {
   const navItems = [
     { label: "HOME", href: "#" },
     { label: "OUR PROJECT", href: "#products", hasDropdown: true },
-    { label: "ABOUT US", href: "#about" },
     { label: "JOIN US", href: "#join" },
   ];
 
@@ -19,7 +19,7 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <div className="text-primary-foreground font-display font-bold text-xl md:text-2xl tracking-wide">
-              <span className="text-secondary">N</span>irvaland
+              <img src={logo} alt="Nirvaland Logo" className="h-12" />
             </div>
           </a>
 

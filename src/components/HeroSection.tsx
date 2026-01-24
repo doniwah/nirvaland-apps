@@ -1,9 +1,9 @@
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.png";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-screen flex items-center mt-20">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent" />
       </div>
 
-      {/* Content */}
+      {/* Content
       <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="max-w-2xl">
           <p className="text-secondary font-script text-3xl md:text-4xl mb-2">
@@ -36,7 +36,7 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Bottom Wave */}
       <div className="absolute bottom-0 left-0 right-0">
