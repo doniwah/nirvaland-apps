@@ -34,13 +34,13 @@ const BookingSection = () => {
           </div>
         </div>
 
-        {/* Person Image - Positioned Absolute Left */}
+        { }
         {/* We use a negative margin or absolute positioning to break the card boundary as shown in the design */}
         <div className="hidden md:block absolute bottom-0 left-0 w-[400px] lg:w-[500px] z-20">
           <img
             src={personImage}
             alt="Representative"
-            className="w-full h-auto object-contain drop-shadow-2xl"
+            className="w-full h-auto object-contain drop-shadow-2xl ml-[-250px]"
           />
         </div>
 
