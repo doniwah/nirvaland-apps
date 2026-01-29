@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@/assets/orchard-logo.png";
 
 const OrchardHeroSection = () => {
     return (
@@ -7,7 +7,7 @@ const OrchardHeroSection = () => {
             <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                    backgroundImage: `url('/src/assets/orchard-hero.jpg')`,
+                    backgroundImage: `url('/src/assets/orchard-hero.png')`,
                 }}
             >
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60"></div>
