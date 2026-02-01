@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import property1 from "@/assets/property-1.jpg";
+import property1 from "@/assets/kawasan_5.png";
 // Assuming image-about.png might be the person image based on naming convention often used in templates
 import personImage from "@/assets/logo-orang.png";
 

@@ -1,5 +1,5 @@
-import property1 from "@/assets/property-1.jpg";
-import property2 from "@/assets/property-2.jpg";
+import property1 from "@/assets/card-orcarhd.png";
+import property2 from "@/assets/crad-beverly.jpeg";
 
 export interface Property {
   id: string;

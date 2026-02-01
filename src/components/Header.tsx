@@ -14,7 +14,7 @@ const Header = () => {
     { label: "Orchard Kost", href: "/orchard-kost" },
   ];
 
-  const navItems = [
+  const navItems = [  
     { label: "HOME", href: "#" },
     { label: "OUR PROJECT", hasDropdown: true },
     { label: "JOIN US", href: "#join" },
