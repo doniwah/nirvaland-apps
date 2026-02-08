@@ -1,4 +1,5 @@
 import logo from "@/assets/orchard-logo.png";
+import heroOrcard from "@/assets/hero_orcard.png";
 
 const OrchardHeroSection = () => {
     return (
@@ -14,8 +15,8 @@ const OrchardHeroSection = () => {
             </div>
 
             {/* Logo - Top Left */}
-            <div className="absolute top-8 left-8 z-20">
-                <img src={logo} alt="Orchard Kos" className="h-16 md:h-20" />
+            <div className="absolute top-3 left-8 z-20">
+                <img src={logo} alt="Orchard Kos" className="h-24 md:h-36" />
             </div>
 
             {/* Content - Bottom Section */}
@@ -32,26 +33,11 @@ const OrchardHeroSection = () => {
 
                     {/* Right Side - Price Badge */}
                     <div className="flex-shrink-0">
-                        <div className="relative">
-                            {/* Top Small Box - "Dapatkan Passive Income" */}
-                            <div className="relative z-10 bg-[#2d7a3e] border-2 border-[#4a9d5e] rounded-2xl px-6 py-2 mb-2 inline-block">
-                                <p className="text-white text-sm font-medium">
-                                    Dapatkan<br />Passive Income
-                                </p>
-                            </div>
-
-                            {/* Bottom Large Box - "370 Jt/Th" */}
-                            <div className="bg-[#2d7a3e] border-2 border-[#4a9d5e] rounded-2xl px-8 py-4 md:px-10 md:py-5 shadow-xl">
-                                <div className="flex items-baseline gap-2">
-                                    <div className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none">
-                                        370
-                                    </div>
-                                    <div className="text-base md:text-lg text-white font-medium">
-                                        Jt<br /><span className="text-white/80">/Th</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <img
+                            src={heroOrcard}
+                            alt="Passive Income Info"
+                            className="w-auto h-auto max-w-[280px] md:max-w-[350px] lg:max-w-[400px]"
+                        />
                     </div>
                 </div>
             </div>

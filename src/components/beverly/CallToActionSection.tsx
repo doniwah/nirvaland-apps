@@ -3,23 +3,15 @@ const CallToActionSection = () => {
         <section className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                    {/* Left Side - YouTube Video */}
-                    <div className="relative">
-                        <div className="bg-[#2d3e68] rounded-2xl overflow-hidden shadow-2xl aspect-video flex items-center justify-center">
-                            {/* YouTube Embed Placeholder - Replace with actual YouTube URL */}
-                            <div className="text-center">
-                                <p className="text-6xl md:text-7xl font-bold text-black">yutub</p>
-                            </div>
-                            {/* Uncomment and replace VIDEO_ID with actual YouTube video ID:
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/VIDEO_ID"
-                title="Beverly Kost Investment Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              */}
+                    {/* Left Side - Video */}
+                    <div className="relative flex justify-center">
+                        <div className="bg-[#2d3e68] rounded-2xl overflow-hidden shadow-2xl w-full max-w-[320px]">
+                            <iframe
+                                src="https://player.mux.com/dvdcnsnm2wf2m1cb5tg7Bsx7ZtcVYsG9S7TrU01htZoQ?metadata-video-title=Video+Detail+Interior&video-title=Video+Detail+Interior"
+                                style={{ width: '100%', border: 'none', aspectRatio: '9/16' }}
+                                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     </div>
 

@@ -1,32 +1,19 @@
-import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import slide1 from "@/assets/orchard_slide1.png";
+import slide2 from "@/assets/orchard_slide2.png";
+import slide3 from "@/assets/orchard_slide3.png";
 
 const OrchardClusterSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Placeholder images - replace with actual kost photos
-    const slides = [
-        {
-            image: "/src/assets/orchard-slide-1.jpg",
-            alt: "Modern Kost Bedroom",
-        },
-        {
-            image: "/src/assets/orchard-slide-2.jpg",
-            alt: "Gated Community",
-        },
-        {
-            image: "/src/assets/orchard-slide-3.jpg",
-            alt: "Common Area",
-        },
-    ];
+    const slides = [slide1, slide2, slide3];
 
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    };
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [slides.length]);
 
     return (
         <section className="py-16 md:py-24 bg-gradient-to-br from-green-600 to-green-700">
@@ -36,53 +23,26 @@ const OrchardClusterSection = () => {
                     <div className="relative">
                         <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
                             {/* Slide Image */}
-                            <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                                <img
-                                    src={slides[currentSlide].image}
-                                    alt={slides[currentSlide].alt}
-                                    className="w-full h-full object-cover"
-                                    onError={(e) => {
-                                        // Fallback if image doesn't exist
-                                        e.currentTarget.style.display = "none";
-                                        e.currentTarget.parentElement!.innerHTML = `
-                                            <div class="flex items-center justify-center w-full h-full text-gray-400">
-                                                <div class="text-center">
-                                                    <p class="text-4xl font-bold mb-2">photo</p>
-                                                    <p class="text-2xl">slide</p>
-                                                </div>
-                                            </div>
-                                        `;
-                                    }}
-                                />
+                            <div className="w-full h-full flex transition-transform duration-1000 ease-in-out"
+                                style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                                {slides.map((slide, index) => (
+                                    <div key={index} className="w-full h-full flex-shrink-0">
+                                        <img
+                                            src={slide}
+                                            alt={`Orchard Slide ${index + 1}`}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                ))}
                             </div>
 
-                            {/* Navigation Arrows */}
-                            <button
-                                onClick={prevSlide}
-                                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
-                                aria-label="Previous slide"
-                            >
-                                <ChevronLeft className="w-6 h-6 text-gray-800" />
-                            </button>
-                            <button
-                                onClick={nextSlide}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
-                                aria-label="Next slide"
-                            >
-                                <ChevronRight className="w-6 h-6 text-gray-800" />
-                            </button>
-
                             {/* Slide Indicators */}
-                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                                 {slides.map((_, index) => (
-                                    <button
+                                    <div
                                         key={index}
-                                        onClick={() => setCurrentSlide(index)}
-                                        className={`w-2 h-2 rounded-full transition-all ${index === currentSlide
-                                                ? "bg-white w-8"
-                                                : "bg-white/50"
+                                        className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-white w-8" : "bg-white/50 w-2"
                                             }`}
-                                        aria-label={`Go to slide ${index + 1}`}
                                     />
                                 ))}
                             </div>

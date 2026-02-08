@@ -11,14 +11,13 @@ const UnitDetailsSection = () => {
         <section className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                    {/* Left Side - Property Image */}
                     <div className="relative">
-                        <div className="rounded-3xl p-8">
+                        <div className="rounded-3xl">
                             <div className="bg-white rounded-2xl overflow-hidden">
                                 <img
                                     src="/src/assets/beverly-home.png"
                                     alt="Beverly Tipe 14"
-                                    className="w-full h-[450px] object-cover"
+                                    className="w-full h-[500px] object-cover"
                                 />
                             </div>
                         </div>

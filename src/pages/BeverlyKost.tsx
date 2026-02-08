@@ -4,6 +4,7 @@ import ClusterSection from "@/components/beverly/ClusterSection";
 import UnitDetailsSection from "@/components/beverly/UnitDetailsSection";
 import FacilitiesSection from "@/components/beverly/FacilitiesSection";
 import CallToActionSection from "@/components/beverly/CallToActionSection";
+import FooterSection from "@/components/beverly/FooterSection";
 
 const BeverlyKost = () => {
     return (
@@ -14,6 +15,7 @@ const BeverlyKost = () => {
             <UnitDetailsSection />
             <FacilitiesSection />
             <CallToActionSection />
+            <FooterSection />
         </div>
     );
 };

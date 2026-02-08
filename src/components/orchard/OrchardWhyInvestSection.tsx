@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import orangOrchard from "@/assets/orang_orchard.png";
 
 const OrchardWhyInvestSection = () => {
     const benefits = [
@@ -30,9 +31,9 @@ const OrchardWhyInvestSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left Side - Image */}
                     <div className="relative">
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-100 to-blue-50">
+                        <div className="relative rounded-3xl overflow-hidden">
                             <img
-                                src="/src/assets/orchard-investment.png"
+                                src={orangOrchard}
                                 alt="OrchardKos Investment"
                                 className="w-full h-auto object-cover"
                             />

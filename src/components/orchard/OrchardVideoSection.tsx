@@ -8,16 +8,15 @@ const OrchardVideoSection = () => {
         <section className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-                    {/* Left Side - YouTube Video */}
+                    {/* Left Side - Video */}
                     <div className="relative">
-                        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                             <iframe
-                                src={`https://www.youtube.com/embed/${youtubeVideoId}`}
-                                title="Orchard Kos Investment Video"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                src="https://player.mux.com/JchM01wOR8WhxpYLHI2bUEJM4v0202vmM9q81Ppv8m3sMg?metadata-video-title=demo+video&video-title=demo+video"
+                                style={{ width: '100%', border: 'none', aspectRatio: '16/9' }}
+                                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                                 allowFullScreen
-                                className="w-full h-full"
-                            />
+                            ></iframe>
                         </div>
                     </div>
 

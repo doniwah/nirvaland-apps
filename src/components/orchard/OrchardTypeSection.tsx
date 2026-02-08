@@ -1,4 +1,5 @@
 import { Bed, Bath, Home } from "lucide-react";
+import orchardTypeImage from "../../assets/imaga_orchard.png";
 
 const OrchardTypeSection = () => {
     const features = [
@@ -24,21 +25,9 @@ const OrchardTypeSection = () => {
                     <div className="relative">
                         <div className="relative rounded-[3rem] overflow-hidden shadow-2xl bg-gradient-to-br from-blue-100 to-white">
                             <img
-                                src="/src/assets/orchard-type-14.png"
+                                src={orchardTypeImage}
                                 alt="Orchard Type 14 Building"
                                 className="w-full h-auto object-cover"
-                                onError={(e) => {
-                                    // Fallback if image doesn't exist
-                                    e.currentTarget.style.display = "none";
-                                    e.currentTarget.parentElement!.innerHTML = `
-                                        <div class="flex items-center justify-center w-full aspect-square bg-gradient-to-br from-blue-100 to-white p-8">
-                                            <div class="text-center">
-                                                <p class="text-6xl font-bold text-gray-400">Orchard</p>
-                                                <p class="text-4xl text-gray-400 mt-2">Type 14</p>
-                                            </div>
-                                        </div>
-                                    `;
-                                }}
                             />
                         </div>
                     </div>
